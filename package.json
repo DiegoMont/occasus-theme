@@ -1,0 +1,21 @@
+{
+  "name": "occasus-theme",
+  "displayName": "Occasus Theme",
+  "description": "A VS Code theme crafted to bring the warm, vibrant hues of the sunset to your editor, turning every line of code into a golden-hour experience.",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.146.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "label": "Occasus",
+        "uiTheme": "vs-dark",
+        "path": "./themes/occasus-color-theme.json"
+      }
+    ]
+  }
+}
