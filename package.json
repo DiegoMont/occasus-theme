@@ -3,8 +3,9 @@
   "displayName": "Occasus Theme",
   "description": "A VS Code theme crafted to bring the warm, vibrant hues of the sunset to your editor, turning every line of code into a golden-hour experience.",
   "version": "0.0.1",
+  "license": "MIT",
   "engines": {
-    "vscode": "^1.146.0"
+    "vscode": "^1.14.0"
   },
   "categories": [
     "Themes"
