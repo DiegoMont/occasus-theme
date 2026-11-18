@@ -1,6 +1,6 @@
 {
-    "name": "Occasus",
-    "colors": {
+  "name": "Occasus",
+  "colors": {
     "foreground": "#F3E7DB",
     "descriptionForeground": "#B5A39A",
     "disabledForeground": "#927F74",
@@ -235,7 +235,7 @@
     "debugIcon.startForeground": "#A8CD88",
     "welcomePage.background": "#211D1B"
   },
-    "tokenColors": [
+  "tokenColors": [
     {
       "name": "Warm ivory default",
       "scope": ["source", "text"],
@@ -417,32 +417,33 @@
       "settings": { "foreground": "#FFAA66", "fontStyle": "" }
     }
   ],
+  "semanticHighlighting": true,
   "semanticTokenColors": {
     "namespace": { "foreground": "#C792FF", "italic": false },
-    "type": { "foreground": "#FFAA66", "italic": false },
     "class": { "foreground": "#FFAA66", "italic": false },
     "enum": { "foreground": "#FFAA66", "italic": false },
     "interface": { "foreground": "#FFAA66", "italic": false },
     "struct": { "foreground": "#FFAA66", "italic": false },
     "typeParameter": { "foreground": "#C792FF", "italic": false },
+    "type": { "foreground": "#FFAA66", "italic": false },
     "parameter": { "foreground": "#E7BDA4", "italic": false },
     "variable": { "foreground": "#F3E7DB", "italic": false },
     "variable.readonly": { "foreground": "#FFAA66", "italic": false },
     "property": { "foreground": "#E7BDA4", "italic": false },
     "property.readonly": { "foreground": "#FFAA66", "italic": false },
     "enumMember": { "foreground": "#FFAA66", "italic": false },
+    "decorator": { "foreground": "#C792FF", "italic": false },
     "event": { "foreground": "#FF70B5", "italic": false },
     "function": { "foreground": "#FF70B5", "italic": false },
     "method": { "foreground": "#FF70B5", "italic": false },
     "macro": { "foreground": "#C792FF", "italic": false },
-    "decorator": { "foreground": "#C792FF", "italic": false },
     "label": { "foreground": "#FF70B5", "italic": false },
     "comment": { "foreground": "#B5A39A", "italic": true },
     "string": { "foreground": "#FFD76D", "italic": false },
     "keyword": { "foreground": "#C792FF", "italic": true },
-    "modifier": { "foreground": "#C792FF", "italic": true },
     "number": { "foreground": "#FFAA66", "italic": false },
     "regexp": { "foreground": "#FFD76D", "italic": false },
-    "operator": { "foreground": "#E7BDA4", "italic": false }
+    "operator": { "foreground": "#E7BDA4", "italic": false },
+    "modifier": { "foreground": "#C792FF", "italic": true },
   }
 }
