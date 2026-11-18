@@ -13,9 +13,13 @@
   "contributes": {
     "themes": [
       {
-        "label": "Occasus",
+        "label": "Occasus Theme",
         "uiTheme": "vs-dark",
         "path": "./themes/occasus-color-theme.json"
+      }, {
+        "label": "Occasus Theme Soft",
+        "uiTheme": "vs-dark",
+        "path": "./themes/occasus-color-theme-soft.json"
       }
     ]
   }
