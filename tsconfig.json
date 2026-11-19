@@ -1,6 +1,8 @@
 {
   "compilerOptions": {
-    "outDir": "dist"
+    "module": "CommonJS",
+    "rootDir": "src",
+    "outDir": "dist",
   },
   "include": ["src/**/*.ts"]
 }
