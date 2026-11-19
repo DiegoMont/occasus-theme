@@ -1,4 +1,5 @@
 import type {ThemeColors} from './theme-colors';
+import {generateThemes} from './theme-generator';
 
 export const themes: ThemeColors[] = [
   {
@@ -24,3 +25,5 @@ export const themes: ThemeColors[] = [
     color15: '#F3E7DB',
   },
 ];
+
+generateThemes(themes);

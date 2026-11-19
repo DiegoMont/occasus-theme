@@ -24,12 +24,12 @@ Use `src/theme-colors.ts` for the shared palette interface, `src/theme-template.
 - [x] **TODO-1:** Add the `ThemeColors` interface in `src/theme-colors.ts` with `name`, a generated JSON filename, `foreground`, `background`, and `color0` through `color15`. **Requirements:** `FR-1`
 - [x] **TODO-2:** Add `src/main.ts` with a typed array of temporary example palette definitions. **Requirements:** `FR-3`
 - [x] **TODO-3:** Implement `getTheme()` in `src/theme-template.ts` to map palette data to workbench colors and semantic token colors. **Requirements:** `FR-2`
-- [ ] **TODO-4:** Implement `generateThemes(themes)` in `src/theme-generator.ts`, call it from `src/main.ts`, validate all filename/path and name/label pairs before writing, then call `getTheme()` for every palette and write JSON to `themes/<fileName>`. **Requirements:** `FR-3`, `FR-4`
-- [ ] **TODO-5:** Ensure `getTheme()` puts `ThemeColors.name` at the generated JSON root and keeps it out of the `colors` object. **Requirements:** `FR-2`
+- [x] **TODO-4:** Implement `generateThemes(themes)` in `src/theme-generator.ts`, call it from `src/main.ts`, validate all filename/path and name/label pairs before writing, then call `getTheme()` for every palette and write JSON to `themes/<fileName>`. **Requirements:** `FR-3`, `FR-4`
+- [x] **TODO-5:** Ensure `getTheme()` puts `ThemeColors.name` at the generated JSON root and keeps it out of the `colors` object. **Requirements:** `FR-2`
 
 ## Open Questions
 
-`src/main.ts` currently has one palette while `package.json` registers two themes. The second palette must be added before two-way registration validation can pass.
+None.
 
 ## Implementation Phases
 

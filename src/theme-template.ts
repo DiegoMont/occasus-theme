@@ -1,9 +1,9 @@
-import { ThemeColors } from "./theme-colors";
+import type {ThemeColors} from './theme-colors';
 
 export function getTheme(colors: ThemeColors) {
   return {
+    name: colors.name,
     colors: {
-      name: colors.name,
       foreground: colors.color0,
       focusBorder: colors.color0,
       descriptionForeground: colors.color0,
@@ -43,6 +43,6 @@ export function getTheme(colors: ThemeColors) {
       regexp: { foreground: colors.color0, italic: false },
       operator: { foreground: colors.color0, italic: false },
       modifier: { foreground: colors.color0, italic: false },
-    }
-  }
+    },
+  };
 }
