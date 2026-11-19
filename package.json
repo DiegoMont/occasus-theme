@@ -10,17 +10,24 @@
   "categories": [
     "Themes"
   ],
+  "scripts": {
+    "generate:theme": "tsc && node dist/main.js"
+  },
   "contributes": {
     "themes": [
       {
         "label": "Occasus Theme",
         "uiTheme": "vs-dark",
         "path": "./themes/occasus-color-theme.json"
-      }, {
+      },
+      {
         "label": "Occasus Theme Soft",
         "uiTheme": "vs-dark",
         "path": "./themes/occasus-color-theme-soft.json"
       }
     ]
+  },
+  "devDependencies": {
+    "typescript": "^7.0.2"
   }
 }
