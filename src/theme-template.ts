@@ -7,16 +7,14 @@ export function getTheme(colors: ThemeColors) {
 
       // Base colors
       focusBorder: '#E6B450',
-      // foreground: colors.lightWhite,
-      // descriptionForeground: colors.lightWhite,
-      foreground: '#C4D6FE6B',
+      foreground: `${colors.orange}6B`,
       disabledForeground: '#c4d6fe36',
       'widget.border': '#1B1F29',
       'widget.shadow': '#00000080',
       'selection.background': '#3388ff40',
-      'icon.foreground': '#C4D6FE6B',
+      // 'icon.foreground': `${colors.orange}6B`,
       errorForeground: '#D95757',
-      descriptionForeground: '#C4D6FE6B',
+      descriptionForeground: `${colors.orange}6B`,
 
       // Text colors
       'textBlockQuote.background': '#141821',
@@ -40,11 +38,11 @@ export function getTheme(colors: ThemeColors) {
 
       // DROPDOWN CONTROL
       'dropdown.background': '#141821',
-      'dropdown.foreground': '#C4D6FE6B',
+      'dropdown.foreground': `${colors.orange}6B`,
       'dropdown.border': '#1B1F29',
 
       // INPUT CONTROL
-      'input.background': '#10141c',
+      'input.background': colors.background,
       'input.border': '#c4d6fe15',
       'input.foreground': '#FCF8EC',
       'input.placeholderForeground': '#c4d6fe36',
@@ -52,7 +50,7 @@ export function getTheme(colors: ThemeColors) {
       'inputOption.activeBorder': '#e6b45033',
       'inputOption.activeBackground': '#e6b4501a',
       'inputOption.activeForeground': '#E6B450',
-      'inputValidation.errorBackground': '#10141c',
+      'inputValidation.errorBackground': colors.background,
       'inputValidation.errorBorder': '#D95757',
       'inputValidation.infoBackground': '#0d1017',
       'inputValidation.infoBorder': '#39bae6',
@@ -82,7 +80,7 @@ export function getTheme(colors: ThemeColors) {
       'list.deemphasizedForeground': '#c4d6fe36',
       'list.hoverBackground': '#141821',
       'list.inactiveSelectionBackground': '#47526633',
-      'list.inactiveSelectionForeground': '#C4D6FE6B',
+      'list.inactiveSelectionForeground': `${colors.orange}6B`,
       'list.invalidItemForeground': '#c4d6fe20',
       'list.errorForeground': '#D95757',
       'tree.indentGuidesStroke': '#c4d6fe43',
@@ -104,18 +102,18 @@ export function getTheme(colors: ThemeColors) {
       'activityBarTop.foreground': '#c4d6fe7b',
       'activityBarTop.activeBorder': '#E6B450',
 
-      // SIDE BAR
+      // Side bar
       'sideBar.background': '#0d1017',
       'sideBar.border': '#1B1F29',
-      'sideBarTitle.foreground': '#C4D6FE6B',
+      'sideBarTitle.foreground': `${colors.orange}6B`,
       'sideBarSectionHeader.background': '#0d1017',
-      'sideBarSectionHeader.foreground': '#C4D6FE6B',
+      'sideBarSectionHeader.foreground': `${colors.orange}6B`,
       'sideBarSectionHeader.border': '#1B1F29',
       'sideBarStickyScroll.border': '#1B1F29',
       'sideBarStickyScroll.shadow': '#00000080',
 
       // MINIMAP
-      'minimap.background': '#10141c',
+      'minimap.background': colors.background,
       'minimap.selectionHighlight': '#3388ff40',
       'minimap.errorHighlight': '#D95757',
       'minimap.findMatchHighlight': '#4c4126',
@@ -126,26 +124,26 @@ export function getTheme(colors: ThemeColors) {
       // EDITOR GROUPS & TABS
       'editorGroup.border': '#1B1F29',
       'editorGroupHeader.noTabsBackground': '#0d1017',
-      'editorGroupHeader.tabsBackground': '#10141c',
+      'editorGroupHeader.tabsBackground': colors.background,
       'editorGroupHeader.connectedTabsBackground': '#0b0e14',
       'editorGroupHeader.tabsBorder': '#1B1F29',
-      'tab.activeBackground': '#10141c',
+      'tab.activeBackground': colors.background,
       'tab.activeForeground': '#FCF8EC',
       'tab.border': '#1B1F29',
       'tab.activeBorderTop': '#E6B450',
-      'tab.unfocusedActiveBorderTop': '#C4D6FE6B',
+      'tab.unfocusedActiveBorderTop': `${colors.orange}6B`,
       'tab.inactiveBackground': '#0d1017',
-      'tab.inactiveForeground': '#C4D6FE6B',
-      'tab.unfocusedActiveForeground': '#C4D6FE6B',
-      'tab.unfocusedInactiveForeground': '#C4D6FE6B',
+      'tab.inactiveForeground': `${colors.orange}6B`,
+      'tab.unfocusedActiveForeground': `${colors.orange}6B`,
+      'tab.unfocusedInactiveForeground': `${colors.orange}6B`,
 
       // Editor colors
       // 'editor.background': colors.background,
       // 'editor.foreground': colors.lightWhite,
-      'editor.background': '#10141c',
+      'editor.background': colors.background,
       'editor.foreground': '#FCF8EC',
       'editorLineNumber.foreground': '#c4d6fe46',
-      'editorLineNumber.activeForeground': '#c4d6fe6b',
+      'editorLineNumber.activeForeground': `${colors.orange}6B`,
       'editorCursor.foreground': '#E6B450',
 
       // EDITOR SELECTIONS
@@ -239,7 +237,7 @@ export function getTheme(colors: ThemeColors) {
       // PEEK VIEW
       'peekView.border': '#141821',
       'peekViewTitle.background': '#141821',
-      'peekViewTitleDescription.foreground': '#C4D6FE6B',
+      'peekViewTitleDescription.foreground': `${colors.orange}6B`,
       'peekViewTitleLabel.foreground': '#FCF8EC',
 
       'peekViewEditor.background': '#141821',
@@ -248,7 +246,7 @@ export function getTheme(colors: ThemeColors) {
 
       'peekViewResult.background': '#141821',
       'peekViewResult.fileForeground': '#FCF8EC',
-      'peekViewResult.lineForeground': '#C4D6FE6B',
+      'peekViewResult.lineForeground': `${colors.orange}6B`,
       'peekViewResult.matchHighlightBackground': '#4c412680', // ???
       // 'peekViewResult.matchHighlightBorder': scheme.editor.findMatch.inactive.darken(.3).hex(), // doesn't exist
       'peekViewResult.selectionBackground': '#141821', // ???
@@ -271,16 +269,16 @@ export function getTheme(colors: ThemeColors) {
       'panel.border': '#1B1F29',
       'panelTitle.activeBorder': '#E6B450', // ???
       'panelTitle.activeForeground': '#FCF8EC',
-      'panelTitle.inactiveForeground': '#C4D6FE6B',
+      'panelTitle.inactiveForeground': `${colors.orange}6B`,
       'panelStickyScroll.border': '#1B1F29',
       'panelStickyScroll.shadow': '#00000080',
 
       // STATUS BAR
       'statusBar.background': '#010102',
-      'statusBar.foreground': '#C4D6FE6B',
+      'statusBar.foreground': `${colors.orange}6B`,
       'statusBar.border': '#1B1F29',
       'statusBar.debuggingBackground': '#f29668',
-      'statusBar.debuggingForeground': '#10141c',
+      'statusBar.debuggingForeground': colors.background,
       'statusBar.noFolderBackground': '#141821',
       'statusBarItem.activeBackground': '#c4d6fe15',
       'statusBarItem.hoverBackground': '#c4d6fe15',
@@ -293,14 +291,14 @@ export function getTheme(colors: ThemeColors) {
       // TITLE BAR
       'titleBar.activeBackground': '#010102',
       'titleBar.inactiveBackground': '#010102',
-      'titleBar.activeForeground': '#C4D6FE6B',
+      'titleBar.activeForeground': `${colors.orange}6B`,
       'titleBar.inactiveForeground': '#c4d6fe4b',
       'titleBar.border': '#1B1F29',
 
       'modernUI.shellBackground': '#010102',
       'modernUI.inactiveShellBackground': '#010102',
       'surface.background': '#0d1017',
-      'surface.foreground': '#C4D6FE6B',
+      'surface.foreground': `${colors.orange}6B`,
       'surface.border': '#171a23',
       'editor.border': '#171a23',
       'modernPanel.border': '#171a23',
@@ -326,7 +324,7 @@ export function getTheme(colors: ThemeColors) {
       // 'menubar.selectionForeground': '?',
       // 'menubar.selectionBackground': '?',
       // 'menubar.selectionBorder': '?',
-      'menu.foreground': '#C4D6FE6B',
+      'menu.foreground': `${colors.orange}6B`,
       // 'menu.background': '?',
       // 'menu.selectionForeground': '?',
       'menu.selectionBackground': '#47526633',
@@ -393,9 +391,9 @@ export function getTheme(colors: ThemeColors) {
       'terminalStickyScrollHover.background': '#47526633',
 
       // COMMAND CENTER
-      'commandCenter.foreground': '#C4D6FE6B',
-      'commandCenter.activeForeground': '#C4D6FE6B',
-      'commandCenter.background': '#10141c',
+      'commandCenter.foreground': `${colors.orange}6B`,
+      'commandCenter.activeForeground': `${colors.orange}6B`,
+      'commandCenter.background': colors.background,
       'commandCenter.activeBackground': '#141821',
       'commandCenter.border': '#c4d6fe15',
       'commandCenter.inactiveBorder': '#c4d6fe15',
@@ -427,7 +425,7 @@ export function getTheme(colors: ThemeColors) {
       'inlineChatInput.border': '#1B1F29',
       'inlineChatInput.focusBorder': '#e6b450b3',
       'inlineChatInput.placeholderForeground': '#c4d6fe36',
-      'inlineChatInput.background': '#10141c',
+      'inlineChatInput.background': colors.background,
       'inlineChatDiff.inserted': '#70bf5633',
       'inlineChatDiff.removed': '#f26d7833',
 
@@ -437,7 +435,7 @@ export function getTheme(colors: ThemeColors) {
       'inlineEdit.gutterIndicator.primaryForeground': '#E6B450',
       'inlineEdit.gutterIndicator.primaryBackground': '#e6b4501a',
       'inlineEdit.gutterIndicator.secondaryBorder': '#c4d6fe36',
-      'inlineEdit.gutterIndicator.secondaryForeground': '#C4D6FE6B',
+      'inlineEdit.gutterIndicator.secondaryForeground': `${colors.orange}6B`,
       'inlineEdit.gutterIndicator.secondaryBackground': '#c4d6fe0b',
       'inlineEdit.gutterIndicator.successfulBorder': '#70bf56',
       'inlineEdit.gutterIndicator.successfulForeground': '#70bf56',
@@ -467,8 +465,8 @@ export function getTheme(colors: ThemeColors) {
       'symbolIcon.enumeratorMemberForeground': '#d2a6ff',
       'symbolIcon.eventForeground': '#e6c08a',
       'symbolIcon.fieldForeground': '#f07178',
-      'symbolIcon.fileForeground': '#C4D6FE6B',
-      'symbolIcon.folderForeground': '#C4D6FE6B',
+      'symbolIcon.fileForeground': `${colors.orange}6B`,
+      'symbolIcon.folderForeground': `${colors.orange}6B`,
       'symbolIcon.functionForeground': '#ffb454',
       'symbolIcon.interfaceForeground': '#59c2ff',
       'symbolIcon.keyForeground': '#39bae6',

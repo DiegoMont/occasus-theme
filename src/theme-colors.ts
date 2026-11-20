@@ -5,6 +5,8 @@ export interface ThemeColors {
   readonly lightWhite: string;
   readonly lightDark: string;
   readonly background: string;
+  readonly backgroundSubtle: string;
+  readonly backgroundMuted: string;
 
   readonly orange: string;
   readonly pink: string;
