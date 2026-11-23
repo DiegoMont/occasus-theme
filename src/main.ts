@@ -13,6 +13,7 @@ export const themes: ThemeColors[] = [
     orange: '#FFAA66',
     pink: '#FF70B5',
     purple: '#C792FF',
+    darkPurple: '#54245F',
     yellow: '#FFD66D',
     beige: '#E7BDA3',
     burgundy: '#8F3655',

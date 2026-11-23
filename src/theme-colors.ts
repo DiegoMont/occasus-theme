@@ -11,6 +11,7 @@ export interface ThemeColors {
   readonly orange: string;
   readonly pink: string;
   readonly purple: string;
+  readonly darkPurple: string;
   readonly yellow: string;
   readonly beige: string;
   readonly burgundy: string;
