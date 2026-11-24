@@ -214,7 +214,7 @@ export function getTheme(colors: ThemeColors) {
 
       // Status Bar colors
       'statusBar.background': colors.background,
-      'statusBar.foreground': colors.beige,
+      'statusBar.foreground': colors.lightDark,
       'statusBar.border': `${colors.darkPurple}80`,
       'statusBar.debuggingBackground': colors.yellow,
       'statusBar.debuggingForeground': colors.background,
@@ -242,7 +242,7 @@ export function getTheme(colors: ThemeColors) {
 
       // Command Center colors
       'commandCenter.background': colors.backgroundMuted,
-      'commandCenter.foreground': colors.beige,
+      'commandCenter.foreground': colors.lightDark,
       'commandCenter.border': `${colors.lightWhite}38`,
       'commandCenter.activeBorder': `${colors.lightWhite}38`,
 
