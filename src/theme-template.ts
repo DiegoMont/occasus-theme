@@ -11,28 +11,33 @@ export function getTheme(colors: ThemeColors) {
       'disabledForeground': colors.lightDark,
       'errorForeground': colors.pink,
       'focusBorder': colors.yellow,
-      'widget.border': `${colors.darkPurple}A0`,
+      'widget.border': `${colors.lightWhite}38`,
       'widget.shadow': `${colors.background}80`,
       'selection.background': `${colors.purple}40`,
-      'icon.foreground': colors.lightDark,
+      'icon.foreground': colors.orange,
 
+      // Modern UI colors
+      'modernEditorTab.activeBackground': colors.backgroundSubtle,
+      'modernEditorTab.inactiveBackground': colors.background,
+      'modernEditorTab.activeHoverBackground': colors.backgroundSubtle,
+      'modernEditorTab.hoverBackground': colors.background,
 
       // Text colors
       'textLink.foreground': colors.pink,
       'textLink.activeForeground': colors.yellow,
       'textBlockQuote.background': colors.backgroundMuted,
-      'textBlockQuote.border': colors.purple,
+      'textBlockQuote.border': colors.burgundy,
       'textCodeBlock.background': colors.background,
       'textPreformat.foreground': colors.yellow,
       'textSeparator.foreground': `${colors.darkPurple}A0`,
 
       // Button control
-      'button.background': colors.purple,
+      'button.background': colors.orange,
       'button.foreground': colors.background,
-      'button.hoverBackground': colors.lightWhite,
-      'button.secondaryBackground': colors.darkPurple,
+      'button.hoverBackground': colors.yellow,
+      'button.secondaryBackground': colors.burgundy,
       'button.secondaryForeground': colors.lightWhite,
-      'button.secondaryHoverBackground': colors.burgundy,
+      'button.secondaryHoverBackground': colors.pink,
 
       // Dropdown control
       'dropdown.background': colors.backgroundMuted,
@@ -45,14 +50,14 @@ export function getTheme(colors: ThemeColors) {
       'input.border': `${colors.darkPurple}A0`,
       'input.placeholderForeground': colors.lightDark,
       'inputOption.activeBackground': `${colors.purple}28`,
-      'inputOption.activeBorder': colors.purple,
+      'inputOption.activeBorder': colors.yellow,
       'inputOption.activeForeground': colors.lightWhite,
       'inputValidation.errorBackground': `${colors.burgundy}90`,
       'inputValidation.errorBorder': colors.pink,
       'inputValidation.warningBackground': `${colors.yellow}20`,
       'inputValidation.warningBorder': colors.yellow,
-      'inputValidation.infoBackground': `${colors.purple}20`,
-      'inputValidation.infoBorder': colors.purple,
+      'inputValidation.infoBackground': `${colors.orange}20`,
+      'inputValidation.infoBorder': colors.orange,
 
       // Scrollbar control
       'scrollbarSlider.background': `${colors.lightDark}38`,
@@ -60,20 +65,20 @@ export function getTheme(colors: ThemeColors) {
       'scrollbarSlider.activeBackground': `${colors.purple}66`,
 
       // Badge
-      'badge.background': colors.purple,
+      'badge.background': colors.orange,
       'badge.foreground': colors.background,
 
       // Progress bar
       'progressBar.background': colors.pink,
 
       // Lists and trees
-      'list.activeSelectionBackground': colors.darkPurple,
+      'list.activeSelectionBackground': colors.burgundy,
       'list.activeSelectionForeground': colors.lightWhite,
-      'list.inactiveSelectionBackground': `${colors.darkPurple}80`,
+      'list.inactiveSelectionBackground': `${colors.burgundy}70`,
       'list.inactiveSelectionForeground': colors.lightWhite,
       'list.hoverBackground': colors.backgroundMuted,
       'list.hoverForeground': colors.lightWhite,
-      'list.focusBackground': colors.darkPurple,
+      'list.focusBackground': colors.burgundy,
       'list.focusForeground': colors.lightWhite,
       'list.highlightForeground': colors.yellow,
       'list.focusHighlightForeground': colors.yellow,
@@ -83,11 +88,11 @@ export function getTheme(colors: ThemeColors) {
 
       // Activity Bar
       'activityBar.background': colors.background,
-      'activityBar.foreground': colors.pink,
+      'activityBar.foreground': colors.orange,
       'activityBar.inactiveForeground': colors.lightDark,
-      'activityBar.activeBorder': colors.pink,
+      'activityBar.activeBorder': colors.yellow,
       'activityBar.border': `${colors.darkPurple}80`,
-      'activityBarBadge.background': colors.purple,
+      'activityBarBadge.background': colors.orange,
       'activityBarBadge.foreground': colors.background,
 
       // Side bar
@@ -110,14 +115,16 @@ export function getTheme(colors: ThemeColors) {
       'editorGroupHeader.tabsBorder': `${colors.darkPurple}80`,
       'editorGroup.border': `${colors.darkPurple}A0`,
       'tab.activeBackground': colors.backgroundSubtle,
+      'tab.unfocusedActiveBackground': colors.backgroundSubtle,
+      'tab.selectedBackground': colors.backgroundSubtle,
       'tab.activeForeground': colors.lightWhite,
       'tab.activeBorder': colors.backgroundSubtle,
-      'tab.activeBorderTop': colors.pink,
+      'tab.activeBorderTop': colors.yellow,
       'tab.inactiveBackground': colors.background,
       'tab.inactiveForeground': colors.lightDark,
       'tab.border': `${colors.darkPurple}80`,
       'tab.hoverBackground': colors.backgroundMuted,
-      'tab.unfocusedActiveBorderTop': `${colors.purple}80`,
+      'tab.unfocusedActiveBorderTop': `${colors.burgundy}B0`,
       'tab.unfocusedActiveForeground': colors.beige,
 
       // Editor colors
@@ -177,32 +184,32 @@ export function getTheme(colors: ThemeColors) {
       // Editor widget colors
       'editorWidget.background': colors.backgroundMuted,
       'editorWidget.foreground': colors.lightWhite,
-      'editorWidget.border': `${colors.darkPurple}A0`,
+      'editorWidget.border': `${colors.lightWhite}38`,
       'editorSuggestWidget.background': colors.backgroundMuted,
       'editorSuggestWidget.foreground': colors.lightWhite,
-      'editorSuggestWidget.border': `${colors.darkPurple}A0`,
-      'editorSuggestWidget.selectedBackground': colors.darkPurple,
+      'editorSuggestWidget.border': `${colors.lightWhite}38`,
+      'editorSuggestWidget.selectedBackground': colors.burgundy,
       'editorSuggestWidget.selectedForeground': colors.lightWhite,
-      'editorSuggestWidget.highlightForeground': colors.yellow,
+      'editorSuggestWidget.highlightForeground': colors.orange,
       'editorHoverWidget.background': colors.backgroundMuted,
       'editorHoverWidget.foreground': colors.lightWhite,
-      'editorHoverWidget.border': `${colors.darkPurple}A0`,
+      'editorHoverWidget.border': `${colors.lightWhite}38`,
 
       // Peek view colors
-      'peekView.border': colors.purple,
-      'peekViewTitle.background': colors.darkPurple,
+      'peekView.border': colors.burgundy,
+      'peekViewTitle.background': colors.burgundy,
       'peekViewTitleLabel.foreground': colors.lightWhite,
       'peekViewTitleDescription.foreground': colors.lightDark,
       'peekViewEditor.background': colors.background,
       'peekViewResult.background': colors.background,
-      'peekViewResult.selectionBackground': colors.darkPurple,
+      'peekViewResult.selectionBackground': colors.burgundy,
       'peekViewResult.selectionForeground': colors.lightWhite,
 
       // Panel colors
       'panel.background': colors.background,
       'panel.border': `${colors.darkPurple}A0`,
       'panelTitle.activeForeground': colors.lightWhite,
-      'panelTitle.activeBorder': colors.pink,
+      'panelTitle.activeBorder': colors.yellow,
       'panelTitle.inactiveForeground': colors.lightDark,
 
       // Status Bar colors
@@ -212,11 +219,11 @@ export function getTheme(colors: ThemeColors) {
       'statusBar.debuggingBackground': colors.yellow,
       'statusBar.debuggingForeground': colors.background,
       'statusBar.noFolderBackground': colors.background,
-      'statusBarItem.hoverBackground': colors.darkPurple,
-      'statusBarItem.remoteBackground': colors.purple,
+      'statusBarItem.hoverBackground': colors.burgundy,
+      'statusBarItem.remoteBackground': colors.orange,
       'statusBarItem.remoteForeground': colors.background,
-      'statusBarItem.prominentBackground': colors.darkPurple,
-      'statusBarItem.prominentForeground': colors.lightWhite,
+      'statusBarItem.prominentBackground': colors.orange,
+      'statusBarItem.prominentForeground': colors.background,
 
       // Title Bar colors
       'titleBar.activeBackground': colors.background,
@@ -228,7 +235,7 @@ export function getTheme(colors: ThemeColors) {
       // Menu Bar colors
       'menu.background': colors.backgroundMuted,
       'menu.foreground': colors.lightWhite,
-      'menu.selectionBackground': colors.darkPurple,
+      'menu.selectionBackground': colors.burgundy,
       'menu.selectionForeground': colors.lightWhite,
       'menu.border': `${colors.darkPurple}A0`,
       'menu.separatorBackground': `${colors.darkPurple}A0`,
@@ -236,7 +243,8 @@ export function getTheme(colors: ThemeColors) {
       // Command Center colors
       'commandCenter.background': colors.backgroundMuted,
       'commandCenter.foreground': colors.beige,
-      'commandCenter.border': `${colors.darkPurple}A0`,
+      'commandCenter.border': `${colors.lightWhite}38`,
+      'commandCenter.activeBorder': `${colors.lightWhite}38`,
 
       // Notification colors
       'notificationCenterHeader.background': colors.background,
@@ -285,7 +293,7 @@ export function getTheme(colors: ThemeColors) {
 
       // Settings
       'settings.headerForeground': colors.yellow,
-      'settings.modifiedItemIndicator': colors.pink,
+      'settings.modifiedItemIndicator': colors.orange,
 
       // Breadcrumbs colors
       'breadcrumb.foreground': colors.lightDark,
