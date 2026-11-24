@@ -3,19 +3,34 @@
   "displayName": "Occasus Theme",
   "description": "A VS Code theme crafted to bring the warm, vibrant hues of the sunset to your editor, turning every line of code into a golden-hour experience.",
   "version": "0.0.1",
+  "license": "MIT",
   "engines": {
-    "vscode": "^1.146.0"
+    "vscode": "^1.43.0"
   },
   "categories": [
     "Themes"
   ],
+  "scripts": {
+    "generate:theme": "tsc && node dist/main.js",
+    "dev": "nodemon --watch src --exec 'npm run generate:theme'"
+  },
   "contributes": {
     "themes": [
       {
-        "label": "Occasus",
+        "label": "Occasus Theme",
         "uiTheme": "vs-dark",
         "path": "./themes/occasus-color-theme.json"
+      },
+      {
+        "label": "Occasus Theme Soft",
+        "uiTheme": "vs-dark",
+        "path": "./themes/occasus-color-theme-soft.json"
       }
     ]
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "nodemon": "^3.1.14",
+    "typescript": "^7.0.2"
   }
 }
