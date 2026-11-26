@@ -1,7 +1,9 @@
 import type {ThemeColors} from './theme-colors';
 
 export function getTheme(colors: ThemeColors) {
-  const modernSurfaceBorder = `${colors.darkPurple}80`;
+  const primaryColor = colors.orange;
+  const secondaryColor = colors.purple;
+  const highlightColor = colors.yellow;
 
   return {
     name: colors.name,
@@ -16,38 +18,38 @@ export function getTheme(colors: ThemeColors) {
       'widget.border': `${colors.lightWhite}38`,
       'widget.shadow': `${colors.background}80`,
       'selection.background': `${colors.purple}40`,
-      'icon.foreground': colors.orange,
+      'icon.foreground': colors.lightDark,
 
       // Modern UI colors
       'surface.background': colors.background,
       'surface.foreground': colors.beige,
-      'surface.border': modernSurfaceBorder,
-      'editor.border': modernSurfaceBorder,
-      'modernPanel.border': modernSurfaceBorder,
-      'modernSash.gripForeground': `${colors.lightWhite}66`,
-      'modernTab.activeBackground': colors.backgroundSubtle,
-      'modernTab.activeForeground': colors.lightWhite,
-      'modernTab.hoverBackground': colors.backgroundMuted,
-      'modernTab.hoverForeground': colors.lightWhite,
-      'modernEditorTab.activeBackground': colors.backgroundSubtle,
-      'modernEditorTab.activeActionBackground': colors.backgroundSubtle,
-      'modernEditorTab.activeForeground': colors.lightWhite,
-      'modernEditorTab.inactiveBackground': '#00000000',
-      'modernEditorTab.hoverBackground': colors.backgroundMuted,
-      'modernEditorTab.hoverActionBackground': colors.backgroundMuted,
-      'modernEditorTab.hoverForeground': colors.lightWhite,
-      'modernEditorTab.activeHoverBackground': colors.backgroundMuted,
-      'modernEditorTab.activeHoverActionBackground': colors.backgroundMuted,
-      'modernEditorTab.selectedActionBackground': colors.backgroundSubtle,
-      'modernActivityBar.background': colors.background,
-      'modernActivityBar.inactiveBackground': colors.background,
-      'modernActivityBarItem.activeBackground': colors.backgroundSubtle,
-      'modernActivityBarItem.activeForeground': colors.lightWhite,
-      'modernActivityBarItem.hoverBackground': colors.backgroundMuted,
-      'modernActivityBarItem.hoverForeground': colors.lightWhite,
-      'modernActivityBar.border': modernSurfaceBorder,
-      'modernUI.shellBackground': colors.background,
-      'modernUI.inactiveShellBackground': colors.background,
+      // 'surface.border': modernSurfaceBorder,
+      // 'editor.border': modernSurfaceBorder,
+      // 'modernPanel.border': modernSurfaceBorder,
+      // 'modernSash.gripForeground': `${colors.lightWhite}66`,
+      'modernTab.activeBackground': colors.background,
+      'modernTab.activeForeground': primaryColor,
+      'modernTab.hoverBackground': colors.background,
+      'modernTab.hoverForeground': secondaryColor,
+      // 'modernEditorTab.activeBackground': colors.backgroundSubtle,
+      // 'modernEditorTab.activeActionBackground': colors.backgroundSubtle,
+      // 'modernEditorTab.activeForeground': colors.lightWhite,
+      // 'modernEditorTab.inactiveBackground': '#00000000',
+      // 'modernEditorTab.hoverBackground': colors.backgroundMuted,
+      // 'modernEditorTab.hoverActionBackground': colors.backgroundMuted,
+      // 'modernEditorTab.hoverForeground': colors.lightWhite,
+      // 'modernEditorTab.activeHoverBackground': colors.backgroundMuted,
+      // 'modernEditorTab.activeHoverActionBackground': colors.backgroundMuted,
+      // 'modernEditorTab.selectedActionBackground': colors.backgroundSubtle,
+      // 'modernActivityBar.background': colors.background,
+      // 'modernActivityBar.inactiveBackground': colors.background,
+      // 'modernActivityBarItem.activeBackground': colors.backgroundMuted,
+      // 'modernActivityBarItem.activeForeground': colors.lightWhite,
+      // 'modernActivityBarItem.hoverBackground': colors.backgroundMuted,
+      // 'modernActivityBarItem.hoverForeground': colors.lightWhite,
+      // 'modernActivityBar.border': modernSurfaceBorder,
+      // 'modernUI.shellBackground': colors.background,
+      // 'modernUI.inactiveShellBackground': colors.background,
       // 'statusBar.inactiveBackground': colors.background,
       // 'editorGroupHeader.connectedTabsBackground': colors.background,
 
@@ -103,10 +105,10 @@ export function getTheme(colors: ThemeColors) {
       // Lists and trees
       'list.activeSelectionBackground': colors.burgundy,
       'list.activeSelectionForeground': colors.lightWhite,
-      'list.inactiveSelectionBackground': `${colors.burgundy}70`,
-      'list.inactiveSelectionForeground': colors.lightWhite,
-      'list.hoverBackground': colors.backgroundMuted,
-      'list.hoverForeground': colors.lightWhite,
+      'list.inactiveSelectionBackground': colors.background,
+      'list.inactiveSelectionForeground': primaryColor,
+      'list.hoverBackground': colors.background,
+      'list.hoverForeground': secondaryColor,
       'list.focusBackground': colors.burgundy,
       'list.focusForeground': colors.lightWhite,
       'list.highlightForeground': colors.yellow,
@@ -116,11 +118,12 @@ export function getTheme(colors: ThemeColors) {
       'tree.indentGuidesStroke': `${colors.darkPurple}A0`,
 
       // Activity Bar
-      'activityBar.foreground': colors.orange,
-      'activityBar.inactiveForeground': colors.lightDark,
-      'activityBar.activeBorder': colors.yellow,
+      'activityBar.foreground': primaryColor,
+      'activityBar.background': colors.background,
+      'activityBar.inactiveForeground': `${secondaryColor}80`,
+      'activityBar.activeBorder': highlightColor,
       'activityBar.border': `${colors.darkPurple}80`,
-      'activityBarBadge.background': colors.orange,
+      'activityBarBadge.background': highlightColor,
       'activityBarBadge.foreground': colors.background,
 
       // Side bar
@@ -152,8 +155,6 @@ export function getTheme(colors: ThemeColors) {
       'tab.unfocusedActiveForeground': colors.beige,
 
       // Editor colors
-      // 'editor.background': colors.backgroundSubtle,
-      // 'editor.foreground': colors.lightWhite,
       'editor.background': colors.backgroundSubtle,
       'editor.foreground': colors.lightWhite,
       'editorLineNumber.foreground': colors.lightDark,
