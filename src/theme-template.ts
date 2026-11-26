@@ -66,14 +66,15 @@ export function getTheme(colors: ThemeColors) {
       'button.background': `${primaryColor}CC`,
       'button.foreground': colors.background,
       'button.hoverBackground': primaryColor,
-      'button.secondaryBackground': colors.burgundy,
+      'button.secondaryBackground': `${colors.burgundy}CC`,
       'button.secondaryForeground': colors.lightWhite,
-      'button.secondaryHoverBackground': colors.pink,
+      'button.secondaryHoverBackground': colors.burgundy,
+      'checkbox.background': colors.backgroundMuted,
 
       // Dropdown control
       'dropdown.background': colors.backgroundMuted,
       'dropdown.foreground': colors.lightWhite,
-      'dropdown.border': `${colors.darkPurple}A0`,
+      'dropdown.border': colors.background,
 
       // Input control
       'input.background': colors.backgroundMuted,
@@ -96,8 +97,8 @@ export function getTheme(colors: ThemeColors) {
       'scrollbarSlider.activeBackground': `${colors.purple}66`,
 
       // Badge
-      'badge.background': highlightColor,
-      'badge.foreground': colors.background,
+      'badge.background': `${primaryColor}40`,
+      'badge.foreground': primaryColor,
 
       // Progress bar
       'progressBar.background': colors.pink,
@@ -128,12 +129,8 @@ export function getTheme(colors: ThemeColors) {
 
       // Side bar
       'sideBar.background': colors.background,
-      'sideBar.foreground': colors.beige,
-      'sideBar.border': `${colors.darkPurple}80`,
+      'sideBar.foreground': colors.lightDark,
       'sideBarTitle.foreground': primaryColor,
-      // 'sideBarSectionHeader.background': colors.background,
-      // 'sideBarSectionHeader.foreground': colors.lightWhite,
-      // 'sideBarSectionHeader.border': colors.background,
 
       // Minimap
       'minimap.selectionHighlight': `${colors.purple}66`,
@@ -240,9 +237,8 @@ export function getTheme(colors: ThemeColors) {
       // Status Bar colors
       'statusBar.background': colors.background,
       'statusBar.foreground': colors.lightDark,
-      'statusBar.border': `${colors.darkPurple}80`,
-      'statusBar.debuggingBackground': colors.yellow,
-      'statusBar.debuggingForeground': colors.background,
+      'statusBar.debuggingBackground': colors.burgundy,
+      'statusBar.debuggingForeground': colors.lightWhite,
       'statusBar.noFolderBackground': colors.background,
       'statusBarItem.hoverBackground': colors.burgundy,
       'statusBarItem.remoteBackground': colors.orange,
@@ -328,7 +324,7 @@ export function getTheme(colors: ThemeColors) {
 
       // Debug Icons colors
       'debugIcon.breakpointForeground': colors.pink,
-      'debugIcon.startForeground': colors.orange,
+      'debugIcon.startForeground': colors.yellow,
     },
     semanticHighlighting: true,
     semanticTokenColors: {
