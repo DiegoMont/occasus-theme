@@ -14,7 +14,7 @@ export function getTheme(colors: ThemeColors) {
       'descriptionForeground': colors.lightDark,
       'disabledForeground': colors.lightDark,
       'errorForeground': colors.pink,
-      'focusBorder': colors.yellow,
+      'focusBorder': `${colors.lightDark}CC`,
       'widget.border': `${colors.lightWhite}38`,
       'widget.shadow': `${colors.background}80`,
       'selection.background': `${colors.purple}40`,
@@ -63,9 +63,9 @@ export function getTheme(colors: ThemeColors) {
       'textSeparator.foreground': `${colors.darkPurple}A0`,
 
       // Button control
-      'button.background': colors.orange,
+      'button.background': `${primaryColor}CC`,
       'button.foreground': colors.background,
-      'button.hoverBackground': colors.yellow,
+      'button.hoverBackground': primaryColor,
       'button.secondaryBackground': colors.burgundy,
       'button.secondaryForeground': colors.lightWhite,
       'button.secondaryHoverBackground': colors.pink,
@@ -76,9 +76,9 @@ export function getTheme(colors: ThemeColors) {
       'dropdown.border': `${colors.darkPurple}A0`,
 
       // Input control
-      'input.background': colors.background,
+      'input.background': colors.backgroundMuted,
       'input.foreground': colors.lightWhite,
-      'input.border': `${colors.darkPurple}A0`,
+      'input.border': colors.backgroundMuted,
       'input.placeholderForeground': colors.lightDark,
       'inputOption.activeBackground': `${colors.purple}28`,
       'inputOption.activeBorder': colors.yellow,
@@ -96,7 +96,7 @@ export function getTheme(colors: ThemeColors) {
       'scrollbarSlider.activeBackground': `${colors.purple}66`,
 
       // Badge
-      'badge.background': colors.orange,
+      'badge.background': highlightColor,
       'badge.foreground': colors.background,
 
       // Progress bar
@@ -130,7 +130,7 @@ export function getTheme(colors: ThemeColors) {
       'sideBar.background': colors.background,
       'sideBar.foreground': colors.beige,
       'sideBar.border': `${colors.darkPurple}80`,
-      'sideBarTitle.foreground': colors.lightWhite,
+      'sideBarTitle.foreground': primaryColor,
       // 'sideBarSectionHeader.background': colors.background,
       // 'sideBarSectionHeader.foreground': colors.lightWhite,
       // 'sideBarSectionHeader.border': colors.background,
