@@ -8,6 +8,7 @@ export interface ThemeColors {
   readonly backgroundSubtle: string;
   readonly backgroundMuted: string;
 
+  readonly green: string;
   readonly orange: string;
   readonly pink: string;
   readonly purple: string;

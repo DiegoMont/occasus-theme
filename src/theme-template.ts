@@ -1,6 +1,15 @@
+import { info } from 'node:console';
 import type {ThemeColors} from './theme-colors';
 
 export function getTheme(colors: ThemeColors) {
+  const primaryColor = colors.orange;
+  const secondaryColor = colors.purple;
+  const highlightColor = colors.yellow;
+
+  const errorColor = colors.burgundy;
+  const warningColor = colors.yellow;
+  const infoColor = colors.purple
+
   return {
     name: colors.name,
     colors: {
@@ -9,18 +18,21 @@ export function getTheme(colors: ThemeColors) {
       'foreground': colors.lightWhite,
       'descriptionForeground': colors.lightDark,
       'disabledForeground': colors.lightDark,
-      'errorForeground': colors.pink,
-      'focusBorder': colors.yellow,
+      'errorForeground': errorColor,
+      'focusBorder': `${colors.lightDark}CC`,
       'widget.border': `${colors.lightWhite}38`,
       'widget.shadow': `${colors.background}80`,
       'selection.background': `${colors.purple}40`,
-      'icon.foreground': colors.orange,
+      'icon.foreground': colors.lightDark,
+      'sash.hoverBorder': primaryColor,
 
       // Modern UI colors
-      'modernEditorTab.activeBackground': colors.backgroundSubtle,
-      'modernEditorTab.inactiveBackground': colors.background,
-      'modernEditorTab.activeHoverBackground': colors.backgroundSubtle,
-      'modernEditorTab.hoverBackground': colors.background,
+      'surface.background': colors.background,
+      'surface.foreground': colors.beige,
+      'modernTab.activeBackground': colors.background,
+      'modernTab.activeForeground': primaryColor,
+      'modernTab.hoverBackground': colors.background,
+      'modernTab.hoverForeground': secondaryColor,
 
       // Text colors
       'textLink.foreground': colors.pink,
@@ -32,32 +44,33 @@ export function getTheme(colors: ThemeColors) {
       'textSeparator.foreground': `${colors.darkPurple}A0`,
 
       // Button control
-      'button.background': colors.orange,
+      'button.background': `${primaryColor}CC`,
       'button.foreground': colors.background,
-      'button.hoverBackground': colors.yellow,
-      'button.secondaryBackground': colors.burgundy,
+      'button.hoverBackground': primaryColor,
+      'button.secondaryBackground': `${colors.darkPurple}CC`,
       'button.secondaryForeground': colors.lightWhite,
-      'button.secondaryHoverBackground': colors.pink,
+      'button.secondaryHoverBackground': colors.darkPurple,
+      'checkbox.background': colors.backgroundMuted,
 
       // Dropdown control
       'dropdown.background': colors.backgroundMuted,
       'dropdown.foreground': colors.lightWhite,
-      'dropdown.border': `${colors.darkPurple}A0`,
+      'dropdown.border': colors.background,
 
       // Input control
-      'input.background': colors.background,
+      'input.background': colors.backgroundMuted,
       'input.foreground': colors.lightWhite,
-      'input.border': `${colors.darkPurple}A0`,
+      'input.border': colors.backgroundMuted,
       'input.placeholderForeground': colors.lightDark,
       'inputOption.activeBackground': `${colors.purple}28`,
       'inputOption.activeBorder': colors.yellow,
       'inputOption.activeForeground': colors.lightWhite,
-      'inputValidation.errorBackground': `${colors.burgundy}90`,
-      'inputValidation.errorBorder': colors.pink,
-      'inputValidation.warningBackground': `${colors.yellow}20`,
-      'inputValidation.warningBorder': colors.yellow,
-      'inputValidation.infoBackground': `${colors.orange}20`,
-      'inputValidation.infoBorder': colors.orange,
+      'inputValidation.errorBackground': `${errorColor}20`,
+      'inputValidation.errorBorder': errorColor,
+      'inputValidation.warningBackground': `${warningColor}20`,
+      'inputValidation.warningBorder': warningColor,
+      'inputValidation.infoBackground': `${infoColor}20`,
+      'inputValidation.infoBorder': infoColor,
 
       // Scrollbar control
       'scrollbarSlider.background': `${colors.lightDark}38`,
@@ -65,71 +78,60 @@ export function getTheme(colors: ThemeColors) {
       'scrollbarSlider.activeBackground': `${colors.purple}66`,
 
       // Badge
-      'badge.background': colors.orange,
-      'badge.foreground': colors.background,
+      'badge.background': `${primaryColor}40`,
+      'badge.foreground': primaryColor,
 
       // Progress bar
       'progressBar.background': colors.pink,
 
       // Lists and trees
-      'list.activeSelectionBackground': colors.burgundy,
+      'list.activeSelectionBackground': `${colors.darkPurple}80`,
       'list.activeSelectionForeground': colors.lightWhite,
-      'list.inactiveSelectionBackground': `${colors.burgundy}70`,
-      'list.inactiveSelectionForeground': colors.lightWhite,
+      'list.inactiveSelectionBackground': colors.backgroundMuted,
+      'list.inactiveSelectionForeground': colors.lightDark,
       'list.hoverBackground': colors.backgroundMuted,
-      'list.hoverForeground': colors.lightWhite,
-      'list.focusBackground': colors.burgundy,
-      'list.focusForeground': colors.lightWhite,
-      'list.highlightForeground': colors.yellow,
-      'list.focusHighlightForeground': colors.yellow,
-      'list.errorForeground': colors.pink,
-      'list.warningForeground': colors.yellow,
+      'list.hoverForeground': colors.lightDark,
+      'list.focusBackground': colors.background,
+      'list.focusForeground': colors.lightDark,
+      'list.focusOutline': colors.darkPurple,
+      'list.errorForeground': errorColor,
+      'list.warningForeground': warningColor,
       'tree.indentGuidesStroke': `${colors.darkPurple}A0`,
 
       // Activity Bar
+      'activityBar.foreground': primaryColor,
       'activityBar.background': colors.background,
-      'activityBar.foreground': colors.orange,
-      'activityBar.inactiveForeground': colors.lightDark,
-      'activityBar.activeBorder': colors.yellow,
+      'activityBar.inactiveForeground': `${secondaryColor}80`,
+      'activityBar.activeBorder': highlightColor,
       'activityBar.border': `${colors.darkPurple}80`,
-      'activityBarBadge.background': colors.orange,
+      'activityBarBadge.background': highlightColor,
       'activityBarBadge.foreground': colors.background,
 
       // Side bar
       'sideBar.background': colors.background,
-      'sideBar.foreground': colors.beige,
-      'sideBar.border': `${colors.darkPurple}80`,
-      'sideBarTitle.foreground': colors.lightWhite,
-      // 'sideBarSectionHeader.background': colors.background,
-      // 'sideBarSectionHeader.foreground': colors.lightWhite,
-      // 'sideBarSectionHeader.border': colors.background,
+      'sideBar.foreground': colors.lightDark,
+      'sideBarTitle.foreground': primaryColor,
 
       // Minimap
       'minimap.selectionHighlight': `${colors.purple}66`,
       'minimap.findMatchHighlight': `${colors.yellow}88`,
-      'minimap.errorHighlight': colors.pink,
-      'minimap.warningHighlight': colors.yellow,
+      'minimap.errorHighlight': errorColor,
+      'minimap.warningHighlight': warningColor,
 
       // Editor Groups & Tabs
       'editorGroupHeader.tabsBackground': colors.background,
       'editorGroupHeader.tabsBorder': `${colors.darkPurple}80`,
       'editorGroup.border': `${colors.darkPurple}A0`,
-      'tab.activeBackground': colors.backgroundSubtle,
       'tab.unfocusedActiveBackground': colors.backgroundSubtle,
       'tab.selectedBackground': colors.backgroundSubtle,
-      'tab.activeForeground': colors.lightWhite,
       'tab.activeBorder': colors.backgroundSubtle,
       'tab.activeBorderTop': colors.yellow,
-      'tab.inactiveBackground': colors.background,
       'tab.inactiveForeground': colors.lightDark,
       'tab.border': `${colors.darkPurple}80`,
-      'tab.hoverBackground': colors.backgroundMuted,
       'tab.unfocusedActiveBorderTop': `${colors.burgundy}B0`,
       'tab.unfocusedActiveForeground': colors.beige,
 
       // Editor colors
-      // 'editor.background': colors.backgroundSubtle,
-      // 'editor.foreground': colors.lightWhite,
       'editor.background': colors.backgroundSubtle,
       'editor.foreground': colors.lightWhite,
       'editorLineNumber.foreground': colors.lightDark,
@@ -166,10 +168,10 @@ export function getTheme(colors: ThemeColors) {
       'editorBracketHighlight.foreground5': colors.beige,
       'editorBracketHighlight.foreground6': colors.lightWhite,
       'editorBracketHighlight.unexpectedBracket.foreground': colors.pink,
-      'editorError.foreground': colors.pink,
-      'editorWarning.foreground': colors.yellow,
-      'editorInfo.foreground': colors.beige,
-      'editorHint.foreground': colors.purple,
+      'editorError.foreground': errorColor,
+      'editorWarning.foreground': warningColor,
+      'editorInfo.foreground': infoColor,
+      'editorHint.foreground': colors.beige,
       'editorGutter.background': colors.backgroundSubtle,
       'editorGutter.addedBackground': colors.orange,
       'editorGutter.modifiedBackground': colors.purple,
@@ -189,7 +191,7 @@ export function getTheme(colors: ThemeColors) {
       'editorSuggestWidget.foreground': colors.lightWhite,
       'editorSuggestWidget.border': `${colors.lightWhite}38`,
       'editorSuggestWidget.selectedBackground': colors.burgundy,
-      'editorSuggestWidget.selectedForeground': colors.lightWhite,
+      'editorSuggestWidget.selectedForeground': colors.background,
       'editorSuggestWidget.highlightForeground': colors.orange,
       'editorHoverWidget.background': colors.backgroundMuted,
       'editorHoverWidget.foreground': colors.lightWhite,
@@ -198,28 +200,28 @@ export function getTheme(colors: ThemeColors) {
       // Peek view colors
       'peekView.border': colors.burgundy,
       'peekViewTitle.background': colors.burgundy,
-      'peekViewTitleLabel.foreground': colors.lightWhite,
-      'peekViewTitleDescription.foreground': colors.lightDark,
+      'peekViewTitleLabel.foreground': colors.background,
+      'peekViewTitleDescription.foreground': colors.background,
       'peekViewEditor.background': colors.background,
       'peekViewResult.background': colors.background,
       'peekViewResult.selectionBackground': colors.burgundy,
-      'peekViewResult.selectionForeground': colors.lightWhite,
+      'peekViewResult.selectionForeground': colors.background,
 
       // Panel colors
       'panel.background': colors.background,
-      'panel.border': `${colors.darkPurple}A0`,
-      'panelTitle.activeForeground': colors.lightWhite,
-      'panelTitle.activeBorder': colors.yellow,
+      'panel.border': `${highlightColor}33`,
+      'panelTitle.activeForeground': highlightColor,
+      'panelTitle.activeBorder': highlightColor,
       'panelTitle.inactiveForeground': colors.lightDark,
 
       // Status Bar colors
       'statusBar.background': colors.background,
       'statusBar.foreground': colors.lightDark,
-      'statusBar.border': `${colors.darkPurple}80`,
-      'statusBar.debuggingBackground': colors.yellow,
+      'statusBar.debuggingBackground': colors.burgundy,
       'statusBar.debuggingForeground': colors.background,
       'statusBar.noFolderBackground': colors.background,
       'statusBarItem.hoverBackground': colors.burgundy,
+      'statusBarItem.hoverForeground': colors.background,
       'statusBarItem.remoteBackground': colors.orange,
       'statusBarItem.remoteForeground': colors.background,
       'statusBarItem.prominentBackground': colors.orange,
@@ -236,7 +238,7 @@ export function getTheme(colors: ThemeColors) {
       'menu.background': colors.backgroundMuted,
       'menu.foreground': colors.lightWhite,
       'menu.selectionBackground': colors.burgundy,
-      'menu.selectionForeground': colors.lightWhite,
+      'menu.selectionForeground': colors.background,
       'menu.border': `${colors.darkPurple}A0`,
       'menu.separatorBackground': `${colors.darkPurple}A0`,
 
@@ -251,9 +253,12 @@ export function getTheme(colors: ThemeColors) {
       'notifications.background': colors.backgroundMuted,
       'notifications.foreground': colors.lightWhite,
       'notifications.border': `${colors.darkPurple}A0`,
-      'notificationsErrorIcon.foreground': colors.pink,
-      'notificationsWarningIcon.foreground': colors.yellow,
-      'notificationsInfoIcon.foreground': colors.beige,
+      'notificationsErrorIcon.foreground': errorColor,
+      'notificationsWarningIcon.foreground': warningColor,
+      'notificationsInfoIcon.foreground': infoColor,
+
+      // Extensions colors
+      'extensionIcon.verifiedForeground': primaryColor,
 
       // Integrated Terminal colors
       'terminal.background': colors.background,
@@ -284,11 +289,13 @@ export function getTheme(colors: ThemeColors) {
       'welcomePage.background': colors.backgroundSubtle,
 
       // Git colors
-      'gitDecoration.addedResourceForeground': colors.orange,
-      'gitDecoration.modifiedResourceForeground': colors.orange,
-      'gitDecoration.deletedResourceForeground': colors.pink,
-      'gitDecoration.untrackedResourceForeground': colors.orange,
-      'gitDecoration.ignoredResourceForeground': colors.lightDark,
+      'gitDecoration.addedResourceForeground': `${colors.green}CC`,
+      'gitDecoration.modifiedResourceForeground': colors.purple,
+      'gitDecoration.deletedResourceForeground': colors.burgundy,
+      'gitDecoration.stageModifiedResourceForeground': `${colors.purple}CC`,
+      'gitDecoration.stageDeletedResourceForeground': `${colors.burgundy}CC`,
+      'gitDecoration.untrackedResourceForeground': colors.green,
+      'gitDecoration.ignoredResourceForeground': `${colors.lightDark}80`,
       'gitDecoration.conflictingResourceForeground': colors.yellow,
 
       // Settings
@@ -301,9 +308,44 @@ export function getTheme(colors: ThemeColors) {
       'breadcrumb.activeSelectionForeground': colors.pink,
       'breadcrumb.background': colors.backgroundSubtle,
 
+      // Symbol Icons colors
+      'symbolIcon.arrayForeground': colors.purple,
+      'symbolIcon.booleanForeground': colors.yellow,
+      'symbolIcon.classForeground': colors.orange,
+      'symbolIcon.colorForeground': colors.pink,
+      'symbolIcon.constantForeground': colors.yellow,
+      'symbolIcon.constructorForeground': colors.orange,
+      'symbolIcon.enumeratorForeground': colors.green,
+      'symbolIcon.enumeratorMemberForeground': colors.yellow,
+      'symbolIcon.eventForeground': colors.pink,
+      'symbolIcon.fieldForeground': colors.beige,
+      'symbolIcon.fileForeground': colors.orange,
+      'symbolIcon.folderForeground': colors.yellow,
+      'symbolIcon.functionForeground': colors.pink,
+      'symbolIcon.interfaceForeground': colors.green,
+      'symbolIcon.keyForeground': colors.purple,
+      'symbolIcon.keywordForeground': colors.purple,
+      'symbolIcon.methodForeground': colors.pink,
+      'symbolIcon.moduleForeground': colors.orange,
+      'symbolIcon.namespaceForeground': colors.purple,
+      'symbolIcon.nullForeground': colors.burgundy,
+      'symbolIcon.numberForeground': colors.orange,
+      'symbolIcon.objectForeground': colors.beige,
+      'symbolIcon.operatorForeground': colors.yellow,
+      'symbolIcon.packageForeground': colors.green,
+      'symbolIcon.propertyForeground': colors.purple,
+      'symbolIcon.referenceForeground': colors.pink,
+      'symbolIcon.snippetForeground': colors.green,
+      'symbolIcon.stringForeground': colors.yellow,
+      'symbolIcon.structForeground': colors.green,
+      'symbolIcon.textForeground': colors.beige,
+      'symbolIcon.typeParameterForeground': colors.yellow,
+      'symbolIcon.unitForeground': colors.orange,
+      'symbolIcon.variableForeground': colors.orange,
+
       // Debug Icons colors
       'debugIcon.breakpointForeground': colors.pink,
-      'debugIcon.startForeground': colors.orange,
+      'debugIcon.startForeground': colors.yellow,
     },
     semanticHighlighting: true,
     semanticTokenColors: {
