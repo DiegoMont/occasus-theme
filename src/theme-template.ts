@@ -1,9 +1,14 @@
+import { info } from 'node:console';
 import type {ThemeColors} from './theme-colors';
 
 export function getTheme(colors: ThemeColors) {
   const primaryColor = colors.orange;
   const secondaryColor = colors.purple;
   const highlightColor = colors.yellow;
+
+  const errorColor = colors.burgundy;
+  const warningColor = colors.yellow;
+  const infoColor = colors.purple
 
   return {
     name: colors.name,
@@ -13,7 +18,7 @@ export function getTheme(colors: ThemeColors) {
       'foreground': colors.lightWhite,
       'descriptionForeground': colors.lightDark,
       'disabledForeground': colors.lightDark,
-      'errorForeground': colors.pink,
+      'errorForeground': errorColor,
       'focusBorder': `${colors.lightDark}CC`,
       'widget.border': `${colors.lightWhite}38`,
       'widget.shadow': `${colors.background}80`,
@@ -66,9 +71,9 @@ export function getTheme(colors: ThemeColors) {
       'button.background': `${primaryColor}CC`,
       'button.foreground': colors.background,
       'button.hoverBackground': primaryColor,
-      'button.secondaryBackground': `${colors.burgundy}CC`,
-      'button.secondaryForeground': colors.background,
-      'button.secondaryHoverBackground': colors.burgundy,
+      'button.secondaryBackground': `${colors.darkPurple}CC`,
+      'button.secondaryForeground': colors.lightWhite,
+      'button.secondaryHoverBackground': colors.darkPurple,
       'checkbox.background': colors.backgroundMuted,
 
       // Dropdown control
@@ -84,12 +89,12 @@ export function getTheme(colors: ThemeColors) {
       'inputOption.activeBackground': `${colors.purple}28`,
       'inputOption.activeBorder': colors.yellow,
       'inputOption.activeForeground': colors.lightWhite,
-      'inputValidation.errorBackground': `${colors.burgundy}90`,
-      'inputValidation.errorBorder': colors.pink,
-      'inputValidation.warningBackground': `${colors.yellow}20`,
-      'inputValidation.warningBorder': colors.yellow,
-      'inputValidation.infoBackground': `${colors.orange}20`,
-      'inputValidation.infoBorder': colors.orange,
+      'inputValidation.errorBackground': `${errorColor}20`,
+      'inputValidation.errorBorder': errorColor,
+      'inputValidation.warningBackground': `${warningColor}20`,
+      'inputValidation.warningBorder': warningColor,
+      'inputValidation.infoBackground': `${infoColor}20`,
+      'inputValidation.infoBorder': infoColor,
 
       // Scrollbar control
       'scrollbarSlider.background': `${colors.lightDark}38`,
@@ -114,8 +119,8 @@ export function getTheme(colors: ThemeColors) {
       'list.focusForeground': colors.background,
       'list.highlightForeground': colors.yellow,
       'list.focusHighlightForeground': colors.yellow,
-      'list.errorForeground': colors.pink,
-      'list.warningForeground': colors.yellow,
+      'list.errorForeground': errorColor,
+      'list.warningForeground': warningColor,
       'tree.indentGuidesStroke': `${colors.darkPurple}A0`,
 
       // Activity Bar
@@ -135,8 +140,8 @@ export function getTheme(colors: ThemeColors) {
       // Minimap
       'minimap.selectionHighlight': `${colors.purple}66`,
       'minimap.findMatchHighlight': `${colors.yellow}88`,
-      'minimap.errorHighlight': colors.pink,
-      'minimap.warningHighlight': colors.yellow,
+      'minimap.errorHighlight': errorColor,
+      'minimap.warningHighlight': warningColor,
 
       // Editor Groups & Tabs
       'editorGroupHeader.tabsBackground': colors.background,
@@ -188,10 +193,10 @@ export function getTheme(colors: ThemeColors) {
       'editorBracketHighlight.foreground5': colors.beige,
       'editorBracketHighlight.foreground6': colors.lightWhite,
       'editorBracketHighlight.unexpectedBracket.foreground': colors.pink,
-      'editorError.foreground': colors.pink,
-      'editorWarning.foreground': colors.yellow,
-      'editorInfo.foreground': colors.beige,
-      'editorHint.foreground': colors.purple,
+      'editorError.foreground': errorColor,
+      'editorWarning.foreground': warningColor,
+      'editorInfo.foreground': infoColor,
+      'editorHint.foreground': colors.beige,
       'editorGutter.background': colors.backgroundSubtle,
       'editorGutter.addedBackground': colors.orange,
       'editorGutter.modifiedBackground': colors.purple,
@@ -273,9 +278,9 @@ export function getTheme(colors: ThemeColors) {
       'notifications.background': colors.backgroundMuted,
       'notifications.foreground': colors.lightWhite,
       'notifications.border': `${colors.darkPurple}A0`,
-      'notificationsErrorIcon.foreground': colors.pink,
-      'notificationsWarningIcon.foreground': colors.yellow,
-      'notificationsInfoIcon.foreground': colors.beige,
+      'notificationsErrorIcon.foreground': errorColor,
+      'notificationsWarningIcon.foreground': warningColor,
+      'notificationsInfoIcon.foreground': infoColor,
 
       // Integrated Terminal colors
       'terminal.background': colors.background,
@@ -307,9 +312,9 @@ export function getTheme(colors: ThemeColors) {
 
       // Git colors
       'gitDecoration.addedResourceForeground': `${colors.green}CC`,
-      'gitDecoration.modifiedResourceForeground': colors.orange,
+      'gitDecoration.modifiedResourceForeground': colors.purple,
       'gitDecoration.deletedResourceForeground': colors.burgundy,
-      'gitDecoration.stageModifiedResourceForeground': `${colors.orange}CC`,
+      'gitDecoration.stageModifiedResourceForeground': `${colors.purple}CC`,
       'gitDecoration.stageDeletedResourceForeground': `${colors.burgundy}CC`,
       'gitDecoration.untrackedResourceForeground': colors.green,
       'gitDecoration.ignoredResourceForeground': `${colors.lightDark}80`,
