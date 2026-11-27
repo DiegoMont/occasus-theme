@@ -24,6 +24,7 @@ export function getTheme(colors: ThemeColors) {
       'widget.shadow': `${colors.background}80`,
       'selection.background': `${colors.purple}40`,
       'icon.foreground': colors.lightDark,
+      'sash.hoverBorder': primaryColor,
 
       // Modern UI colors
       'surface.background': colors.background,
@@ -318,6 +319,7 @@ export function getTheme(colors: ThemeColors) {
       'gitDecoration.untrackedResourceForeground': colors.green,
       'gitDecoration.ignoredResourceForeground': `${colors.lightDark}80`,
       'gitDecoration.conflictingResourceForeground': colors.yellow,
+
       // Settings
       'settings.headerForeground': colors.yellow,
       'settings.modifiedItemIndicator': colors.orange,
@@ -327,6 +329,41 @@ export function getTheme(colors: ThemeColors) {
       'breadcrumb.focusForeground': colors.yellow,
       'breadcrumb.activeSelectionForeground': colors.pink,
       'breadcrumb.background': colors.backgroundSubtle,
+
+      // Symbol Icons colors
+      'symbolIcon.arrayForeground': colors.purple,
+      'symbolIcon.booleanForeground': colors.yellow,
+      'symbolIcon.classForeground': colors.orange,
+      'symbolIcon.colorForeground': colors.pink,
+      'symbolIcon.constantForeground': colors.yellow,
+      'symbolIcon.constructorForeground': colors.orange,
+      'symbolIcon.enumeratorForeground': colors.green,
+      'symbolIcon.enumeratorMemberForeground': colors.yellow,
+      'symbolIcon.eventForeground': colors.pink,
+      'symbolIcon.fieldForeground': colors.beige,
+      'symbolIcon.fileForeground': colors.orange,
+      'symbolIcon.folderForeground': colors.yellow,
+      'symbolIcon.functionForeground': colors.pink,
+      'symbolIcon.interfaceForeground': colors.green,
+      'symbolIcon.keyForeground': colors.purple,
+      'symbolIcon.keywordForeground': colors.purple,
+      'symbolIcon.methodForeground': colors.pink,
+      'symbolIcon.moduleForeground': colors.orange,
+      'symbolIcon.namespaceForeground': colors.purple,
+      'symbolIcon.nullForeground': colors.burgundy,
+      'symbolIcon.numberForeground': colors.orange,
+      'symbolIcon.objectForeground': colors.beige,
+      'symbolIcon.operatorForeground': colors.yellow,
+      'symbolIcon.packageForeground': colors.green,
+      'symbolIcon.propertyForeground': colors.purple,
+      'symbolIcon.referenceForeground': colors.pink,
+      'symbolIcon.snippetForeground': colors.green,
+      'symbolIcon.stringForeground': colors.yellow,
+      'symbolIcon.structForeground': colors.green,
+      'symbolIcon.textForeground': colors.beige,
+      'symbolIcon.typeParameterForeground': colors.yellow,
+      'symbolIcon.unitForeground': colors.orange,
+      'symbolIcon.variableForeground': colors.orange,
 
       // Debug Icons colors
       'debugIcon.breakpointForeground': colors.pink,
