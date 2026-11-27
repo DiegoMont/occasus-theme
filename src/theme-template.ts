@@ -234,9 +234,9 @@ export function getTheme(colors: ThemeColors) {
 
       // Panel colors
       'panel.background': colors.background,
-      'panel.border': `${colors.darkPurple}A0`,
-      'panelTitle.activeForeground': colors.lightWhite,
-      'panelTitle.activeBorder': colors.yellow,
+      'panel.border': `${highlightColor}33`,
+      'panelTitle.activeForeground': highlightColor,
+      'panelTitle.activeBorder': highlightColor,
       'panelTitle.inactiveForeground': colors.lightDark,
 
       // Status Bar colors
@@ -281,6 +281,9 @@ export function getTheme(colors: ThemeColors) {
       'notificationsErrorIcon.foreground': errorColor,
       'notificationsWarningIcon.foreground': warningColor,
       'notificationsInfoIcon.foreground': infoColor,
+
+      // Extensions colors
+      'extensionIcon.verifiedForeground': primaryColor,
 
       // Integrated Terminal colors
       'terminal.background': colors.background,
