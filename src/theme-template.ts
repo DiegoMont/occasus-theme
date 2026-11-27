@@ -67,7 +67,7 @@ export function getTheme(colors: ThemeColors) {
       'button.foreground': colors.background,
       'button.hoverBackground': primaryColor,
       'button.secondaryBackground': `${colors.burgundy}CC`,
-      'button.secondaryForeground': colors.lightWhite,
+      'button.secondaryForeground': colors.background,
       'button.secondaryHoverBackground': colors.burgundy,
       'checkbox.background': colors.backgroundMuted,
 
@@ -105,13 +105,13 @@ export function getTheme(colors: ThemeColors) {
 
       // Lists and trees
       'list.activeSelectionBackground': colors.burgundy,
-      'list.activeSelectionForeground': colors.lightWhite,
+      'list.activeSelectionForeground': colors.background,
       'list.inactiveSelectionBackground': colors.background,
       'list.inactiveSelectionForeground': primaryColor,
       'list.hoverBackground': colors.background,
       'list.hoverForeground': secondaryColor,
       'list.focusBackground': colors.burgundy,
-      'list.focusForeground': colors.lightWhite,
+      'list.focusForeground': colors.background,
       'list.highlightForeground': colors.yellow,
       'list.focusHighlightForeground': colors.yellow,
       'list.errorForeground': colors.pink,
@@ -211,7 +211,7 @@ export function getTheme(colors: ThemeColors) {
       'editorSuggestWidget.foreground': colors.lightWhite,
       'editorSuggestWidget.border': `${colors.lightWhite}38`,
       'editorSuggestWidget.selectedBackground': colors.burgundy,
-      'editorSuggestWidget.selectedForeground': colors.lightWhite,
+      'editorSuggestWidget.selectedForeground': colors.background,
       'editorSuggestWidget.highlightForeground': colors.orange,
       'editorHoverWidget.background': colors.backgroundMuted,
       'editorHoverWidget.foreground': colors.lightWhite,
@@ -220,12 +220,12 @@ export function getTheme(colors: ThemeColors) {
       // Peek view colors
       'peekView.border': colors.burgundy,
       'peekViewTitle.background': colors.burgundy,
-      'peekViewTitleLabel.foreground': colors.lightWhite,
-      'peekViewTitleDescription.foreground': colors.lightDark,
+      'peekViewTitleLabel.foreground': colors.background,
+      'peekViewTitleDescription.foreground': colors.background,
       'peekViewEditor.background': colors.background,
       'peekViewResult.background': colors.background,
       'peekViewResult.selectionBackground': colors.burgundy,
-      'peekViewResult.selectionForeground': colors.lightWhite,
+      'peekViewResult.selectionForeground': colors.background,
 
       // Panel colors
       'panel.background': colors.background,
@@ -238,9 +238,10 @@ export function getTheme(colors: ThemeColors) {
       'statusBar.background': colors.background,
       'statusBar.foreground': colors.lightDark,
       'statusBar.debuggingBackground': colors.burgundy,
-      'statusBar.debuggingForeground': colors.lightWhite,
+      'statusBar.debuggingForeground': colors.background,
       'statusBar.noFolderBackground': colors.background,
       'statusBarItem.hoverBackground': colors.burgundy,
+      'statusBarItem.hoverForeground': colors.background,
       'statusBarItem.remoteBackground': colors.orange,
       'statusBarItem.remoteForeground': colors.background,
       'statusBarItem.prominentBackground': colors.orange,
@@ -257,7 +258,7 @@ export function getTheme(colors: ThemeColors) {
       'menu.background': colors.backgroundMuted,
       'menu.foreground': colors.lightWhite,
       'menu.selectionBackground': colors.burgundy,
-      'menu.selectionForeground': colors.lightWhite,
+      'menu.selectionForeground': colors.background,
       'menu.border': `${colors.darkPurple}A0`,
       'menu.separatorBackground': `${colors.darkPurple}A0`,
 
@@ -305,13 +306,14 @@ export function getTheme(colors: ThemeColors) {
       'welcomePage.background': colors.backgroundSubtle,
 
       // Git colors
-      'gitDecoration.addedResourceForeground': colors.orange,
+      'gitDecoration.addedResourceForeground': `${colors.green}CC`,
       'gitDecoration.modifiedResourceForeground': colors.orange,
-      'gitDecoration.deletedResourceForeground': colors.pink,
-      'gitDecoration.untrackedResourceForeground': colors.orange,
-      'gitDecoration.ignoredResourceForeground': colors.lightDark,
+      'gitDecoration.deletedResourceForeground': colors.burgundy,
+      'gitDecoration.stageModifiedResourceForeground': `${colors.orange}CC`,
+      'gitDecoration.stageDeletedResourceForeground': `${colors.burgundy}CC`,
+      'gitDecoration.untrackedResourceForeground': colors.green,
+      'gitDecoration.ignoredResourceForeground': `${colors.lightDark}80`,
       'gitDecoration.conflictingResourceForeground': colors.yellow,
-
       // Settings
       'settings.headerForeground': colors.yellow,
       'settings.modifiedItemIndicator': colors.orange,

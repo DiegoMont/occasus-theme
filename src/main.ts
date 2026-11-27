@@ -10,13 +10,14 @@ export const themes: ThemeColors[] = [
     background: '#1C1816',
     backgroundSubtle: '#211D1B',
     backgroundMuted: '#2B2522',
+    green: '#A8CD88',
     orange: '#FFAA66',
     pink: '#FF70B5',
     purple: '#C792FF',
     darkPurple: '#54245F',
     yellow: '#FFD66D',
     beige: '#E7BDA3',
-    burgundy: '#8F3655',
+    burgundy: '#F0444D',
   },
 ];
 
